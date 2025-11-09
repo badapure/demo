@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "Installing required packages..."
-sudo yum install -y httpd
+yum install -y httpd
