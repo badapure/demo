@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo "Installing zip utility..."
+      - yum install -y zip
+  build:
+    commands:
+      - echo "Zipping application files..."
+      - zip -r build.zip . -x "*.git*" "*.github*" "*.idea*" "scripts/*"
+artifacts:
+  files:
+    - build.zip
